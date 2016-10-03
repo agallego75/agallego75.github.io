@@ -23,6 +23,7 @@
 <!-- Main menu starts here -->
 
 <!-- Main Menu end -->
+
 <div class="wrap bg1">
   <div class="container"> <!-- Header starts -->
     <div class="hero-unit">
@@ -32,15 +33,29 @@
       <h2 class="hide-text">email: a.white.gallego@gmail.com</h2>
 	  
 	  <form action="contact.php" method="post">
-    <h2>Your name</h2>
-    <input type="text" name="cf_name">
+	  <link href="css/bootstrap2.css" rel="stylesheet">
+	  
+	  <style>
+      input[type="text"] 
+      {
+         width: 200px;
+         border: 1px solid #CCC;
+		 font-size:24px;
+      }
+      </style>
+	  
+      <h2>Your name</h2>
+      <input type="text" name="cf_name" style="width: 400px;" />
+	 
+	
     <h2>Your e-mail</h2>
-    <input type="text" name="cf_email">
+    <input type="text" name="cf_email" style="width: 400px;" />
     <h2>Message</h2>
 	<textarea name="body" rows="10" cols="5"> </textarea>
 <h2>   
-    <input type="submit" value="Send">
-    <input type="reset" value="Clear">
+
+    <input type="submit" value="Send" style="font-size: 20px; width: 100px" />
+    <input type="reset" value="Clear"  style = "font-size: 20px; width: 100px" />
 	</h2>
     </form>
      
