@@ -6,12 +6,6 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link href='http://fonts.googleapis.com/css?family=Lato|Fjalla+One' rel='stylesheet' type='text/css'>
-<!-- Le styles -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
-<link href="css/bootstrap1.css" rel="stylesheet">
-
-
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -24,51 +18,43 @@
 
 <!-- Main Menu end -->
 
-<div class="wrap bg1">
-  <div class="container"> <!-- Header starts -->
-    <div class="hero-unit">
-      <div class="brand">
-       <h2>Contact</h2>
-      </div>
-      <h2 class="hide-text">email: a.white.gallego@gmail.com</h2>
-	  
-	  <form action="contact.php" method="post">
-	  <link href="css/bootstrap2.css" rel="stylesheet">
-	  
-	  <style>
-      input[type="text"] 
-      {
-         width: 200px;
-         border: 1px solid #CCC;
-		 font-size:24px;
-      }
-      </style>
-	  
-      <h2>Your name</h2>
-      <input type="text" name="cf_name" style="width: 400px;" />
-	 
-	
-    <h2>Your e-mail</h2>
-    <input type="text" name="cf_email" style="width: 400px;" />
-    <h2>Message</h2>
-	<textarea name="body" rows="10" cols="5"> </textarea>
-<h2>   
-
-    <input type="submit" value="Send" style="font-size: 20px; width: 100px" />
-    <input type="reset" value="Clear"  style = "font-size: 20px; width: 100px" />
-	</h2>
-    </form>
-     
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type='text/javascript' src="js/validation.js"></script>
+<div id='container'>
+  <form name="contactForm" id='contact_form' method="post" action='email.php'>
+    <h2>Ajax HTML Contact Form</h2>
+    <h3>After submission of the form the email will be sent to the email id you entered.</h3>
+    <p> Your Name:
+    <div id='name_error' class='error'><img src='images/error.png'>Please enter your name.</div>
+    <div>
+      <input type='text' name='name' id='name'>
     </div>
-   
-  </div>
-  <!-- header end --> 
+    </p>
+    <p> Your E-mail ID:
+    <div id='email_error' class='error'><img src='images/error.png'>Please enter your valid E-mail ID.</div>
+    <div>
+    <input type='text' name='email' id='email'>
+    <div>
+    </p>
+    <p> Email Subject:
+    <div id='subject_error' class='error'><img src='images/error.png'>Please enter the subject.</div>
+    <div>
+      <input type='text' name='subject' id='subject'>
+    </div>
+    </p>
+    <p> Your Message:
+    <div id='message_error' class='error'><img src='images/error.png'>Please enter your message.</div>
+    <div>
+      <textarea name='message' id='message'></textarea>
+    </div>
+    </p>
+    <div id='mail_success' class='success'><img src='images/success.png'>Your message has been sent successfully.</div>
+    <div id='mail_fail' class='error'><img src='images/error.png'> Sorry, error occured this time sending your message.</div>
+    <p id='submit'>
+      <input type='submit' id='send_message' value='Submit Form'>
+    </p>
+  </form>
+  <footer>This demo form is the reference to the article <a href="http://bit.ly/122DCsw" title="How to create a simple HTML contact form with Ajax & PHP" target="_blank">http://bit.ly/122DCsw</a> </footer>
 </div>
-
-<!-- Le javascript
-    ================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
-<script src="js/jquery.js"></script> 
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
